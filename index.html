@@ -1,0 +1,157 @@
+---
+layout: home
+title: VS-HCI Documentation
+description: Installing, running and operating VS-HCI — from booting the first server to upgrading a fleet.
+status: published
+sitemap:
+  priority: 1.0
+---
+
+<section class="hero">
+  <div class="aurora aurora-a"></div>
+  <div class="aurora aurora-b"></div>
+  <div class="hero__inner">
+    <p class="hero__badge">Documentation</p>
+    <h1>Everything VS-HCI does, <em>written down.</em></h1>
+    <p class="hero__lede">
+      Compute, networking and storage converged on the same nodes. Start with booting a
+      server from the installation medium, and end with a fleet you can upgrade from one
+      screen.
+    </p>
+    <div class="hero__actions">
+      <a class="pill pill-primary" href="{{ '/getting-started/' | relative_url }}">Get started</a>
+      <a class="pill pill-outline" href="{{ '/reference/api/' | relative_url }}">API reference</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <p class="eyebrow">Start here</p>
+  <h2>From a bare server to a running cluster.</h2>
+  <p class="home-section__lede">
+    One installation medium carries the whole operating system. Boot it, answer the wizard,
+    and the node either founds a cluster or joins one.
+  </p>
+
+  <div class="card-grid">
+    <a class="card doc-card lift" href="{{ '/getting-started/requirements/' | relative_url }}">
+      <span class="doc-card__icon">{% include icon.html name="server" %}</span>
+      <h3>Requirements</h3>
+      <p>What each server needs before you boot the medium.</p>
+    </a>
+    <a class="card doc-card lift" href="{{ '/getting-started/first-server/' | relative_url }}">
+      <span class="doc-card__icon">{% include icon.html name="rocket" %}</span>
+      <h3>Install the first server</h3>
+      <p>Found the cluster and take the join token off the summary screen.</p>
+    </a>
+    <a class="card doc-card lift" href="{{ '/getting-started/adding-servers/' | relative_url }}">
+      <span class="doc-card__icon">{% include icon.html name="network" %}</span>
+      <h3>Add servers</h3>
+      <p>Join a node as a controller or a host, then approve it in the console.</p>
+    </a>
+  </div>
+</section>
+
+<section class="home-section--alt">
+  <div>
+    <p class="eyebrow">The platform</p>
+    <h2>What the console manages.</h2>
+    <p class="home-section__lede">
+      Workloads on top, the fabrics and pools underneath them, and the control plane that
+      keeps both running.
+    </p>
+
+    <div class="card-grid">
+      <div class="card doc-card lift">
+        <span class="doc-card__icon">{% include icon.html name="server" %}</span>
+        <h3>Virtual machines</h3>
+        <p>Lifecycle, templates, live migration, snapshots and consoles.</p>
+        <ul class="doc-card__links">
+          <li><a href="{{ '/vms/creating/' | relative_url }}">Creating a VM</a></li>
+          <li><a href="{{ '/vms/live-migration/' | relative_url }}">Live migration</a></li>
+          <li><a href="{{ '/vms/snapshots/' | relative_url }}">Snapshots</a></li>
+        </ul>
+      </div>
+
+      <div class="card doc-card lift">
+        <span class="doc-card__icon">{% include icon.html name="box" %}</span>
+        <h3>Containers and Kubernetes</h3>
+        <p>Docker containers beside the VMs, and k3s clusters on your own nodes.</p>
+        <ul class="doc-card__links">
+          <li><a href="{{ '/workloads/containers/' | relative_url }}">Containers</a></li>
+          <li><a href="{{ '/workloads/kubernetes/' | relative_url }}">Kubernetes clusters</a></li>
+        </ul>
+      </div>
+
+      <div class="card doc-card lift">
+        <span class="doc-card__icon">{% include icon.html name="network" %}</span>
+        <h3>Networking</h3>
+        <p>Fabrics, distributed switches, routing, NAT and security policy.</p>
+        <ul class="doc-card__links">
+          <li><a href="{{ '/networking/fabrics/' | relative_url }}">Fabrics</a></li>
+          <li><a href="{{ '/networking/distributed-switches/' | relative_url }}">Distributed switches</a></li>
+          <li><a href="{{ '/networking/security-policies/' | relative_url }}">Security policies</a></li>
+        </ul>
+      </div>
+
+      <div class="card doc-card lift">
+        <span class="doc-card__icon">{% include icon.html name="database" %}</span>
+        <h3>Storage</h3>
+        <p>Local pools, replicated volumes, and exports for everything outside the cluster.</p>
+        <ul class="doc-card__links">
+          <li><a href="{{ '/storage/pools/' | relative_url }}">Pools</a></li>
+          <li><a href="{{ '/storage/replicated/' | relative_url }}">Replicated storage</a></li>
+          <li><a href="{{ '/storage/exports/' | relative_url }}">Exports</a></li>
+        </ul>
+      </div>
+
+      <div class="card doc-card lift">
+        <span class="doc-card__icon">{% include icon.html name="repeat" %}</span>
+        <h3>High availability</h3>
+        <p>Controllers behind a virtual IP, and what a failover does to what is running.</p>
+        <ul class="doc-card__links">
+          <li><a href="{{ '/high-availability/' | relative_url }}">How it works</a></li>
+          <li><a href="{{ '/high-availability/failover/' | relative_url }}">Failover and recovery</a></li>
+        </ul>
+      </div>
+
+      <div class="card doc-card lift">
+        <span class="doc-card__icon">{% include icon.html name="settings" %}</span>
+        <h3>Administration</h3>
+        <p>Accounts, roles, two-factor, API keys, certificates and the audit trail.</p>
+        <ul class="doc-card__links">
+          <li><a href="{{ '/administration/users-and-roles/' | relative_url }}">Users and roles</a></li>
+          <li><a href="{{ '/administration/two-factor/' | relative_url }}">Two-factor authentication</a></li>
+          <li><a href="{{ '/administration/licensing/' | relative_url }}">Licensing</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <p class="eyebrow">Keeping it running</p>
+  <h2>Day two.</h2>
+  <p class="home-section__lede">
+    Metrics every ten seconds, thresholds that notify, snapshots on a schedule, and a
+    signed release you apply to the whole fleet at once.
+  </p>
+
+  <div class="card-grid">
+    <a class="card doc-card lift" href="{{ '/monitoring/alerts/' | relative_url }}">
+      <span class="doc-card__icon">{% include icon.html name="activity" %}</span>
+      <h3>Monitoring and alerts</h3>
+      <p>Thresholds on any metric, delivered by email, webhook or Slack.</p>
+    </a>
+    <a class="card doc-card lift" href="{{ '/data-protection/backups/' | relative_url }}">
+      <span class="doc-card__icon">{% include icon.html name="shield" %}</span>
+      <h3>Data protection</h3>
+      <p>Snapshot policies, and backups to local disk, NFS, iSCSI or remote SSH.</p>
+    </a>
+    <a class="card doc-card lift" href="{{ '/updating/' | relative_url }}">
+      <span class="doc-card__icon">{% include icon.html name="download" %}</span>
+      <h3>Updating</h3>
+      <p>One signed file per release, verified before anything is installed.</p>
+    </a>
+  </div>
+</section>

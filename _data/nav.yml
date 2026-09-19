@@ -1,0 +1,159 @@
+# ── Sidebar navigation ──────────────────────────────────────────────────────
+#
+# The whole site map lives here. Adding a page means adding the .md file and a
+# line below; nothing else knows the order. `url` is the page's permalink
+# (trailing slash, no baseurl — the templates add that).
+
+- section: Getting started
+  icon: rocket
+  items:
+    - title: What VS-HCI is
+      url: /getting-started/
+    - title: Requirements
+      url: /getting-started/requirements/
+    - title: Creating install media
+      url: /getting-started/install-media/
+    - title: Installing the first server
+      url: /getting-started/first-server/
+    - title: Adding servers
+      url: /getting-started/adding-servers/
+    - title: First sign-in
+      url: /getting-started/first-sign-in/
+
+- section: The console
+  icon: layout
+  items:
+    - title: A tour of the console
+      url: /console/
+    - title: Dashboard
+      url: /console/dashboard/
+    - title: Infrastructure
+      url: /console/infrastructure/
+    - title: Approvals
+      url: /console/approvals/
+    - title: Tasks
+      url: /console/tasks/
+
+- section: Virtual machines
+  icon: server
+  items:
+    - title: Overview
+      url: /vms/
+    - title: Creating a VM
+      url: /vms/creating/
+    - title: Templates
+      url: /vms/templates/
+    - title: Console and terminal
+      url: /vms/console-access/
+    - title: Live migration
+      url: /vms/live-migration/
+    - title: Snapshots
+      url: /vms/snapshots/
+    - title: Resizing CPU and memory
+      url: /vms/resizing/
+
+- section: Containers and Kubernetes
+  icon: box
+  items:
+    - title: Containers
+      url: /workloads/containers/
+    - title: Kubernetes clusters
+      url: /workloads/kubernetes/
+
+- section: Networking
+  icon: network
+  items:
+    - title: Overview
+      url: /networking/
+    - title: Fabrics
+      url: /networking/fabrics/
+    - title: Distributed switches
+      url: /networking/distributed-switches/
+    - title: Routing and NAT
+      url: /networking/routing-and-nat/
+    - title: Security policies
+      url: /networking/security-policies/
+    - title: Uplinks and bonds
+      url: /networking/uplinks-and-bonds/
+
+- section: Storage
+  icon: database
+  items:
+    - title: Overview
+      url: /storage/
+    - title: Pools
+      url: /storage/pools/
+    - title: Volumes
+      url: /storage/volumes/
+    - title: Replicated storage
+      url: /storage/replicated/
+    - title: Exports
+      url: /storage/exports/
+
+- section: Data protection
+  icon: shield
+  items:
+    - title: Snapshot policies
+      url: /data-protection/snapshot-policies/
+    - title: Backup and restore
+      url: /data-protection/backups/
+
+- section: Monitoring
+  icon: activity
+  items:
+    - title: Metrics
+      url: /monitoring/metrics/
+    - title: Alerts
+      url: /monitoring/alerts/
+
+- section: Administration
+  icon: settings
+  items:
+    - title: Users and roles
+      url: /administration/users-and-roles/
+    - title: Two-factor authentication
+      url: /administration/two-factor/
+    - title: API keys
+      url: /administration/api-keys/
+    - title: Audit log
+      url: /administration/audit-log/
+    - title: Certificates
+      url: /administration/certificates/
+    - title: Licensing
+      url: /administration/licensing/
+
+- section: High availability
+  icon: repeat
+  items:
+    - title: How it works
+      url: /high-availability/
+    - title: Failover and recovery
+      url: /high-availability/failover/
+
+- section: Updating
+  icon: download
+  items:
+    - title: Releases
+      url: /updating/
+    - title: Upgrading the fleet
+      url: /updating/fleet-upgrade/
+    - title: Air-gapped sites
+      url: /updating/air-gapped/
+
+- section: Reference
+  icon: book
+  items:
+    - title: REST API
+      url: /reference/api/
+    - title: Configuration
+      url: /reference/configuration/
+    - title: Glossary
+      url: /reference/glossary/
+
+- section: Support
+  icon: help
+  items:
+    - title: Troubleshooting
+      url: /support/troubleshooting/
+    - title: Release notes
+      url: /support/release-notes/

@@ -1,0 +1,48 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__about">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand__tile">{% include logo.html %}</span>
+        <span class="brand__text"><span class="brand__name">{{ site.product.name }}</span></span>
+      </a>
+      <p>
+        Hyperconverged infrastructure for KVM fleets, by {{ site.product.vendor }}.
+        Compute, networking and storage on the same nodes, managed from one console.
+      </p>
+    </div>
+
+    <div>
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="{{ '/getting-started/' | relative_url }}">Getting started</a></li>
+        <li><a href="{{ '/vms/' | relative_url }}">Virtual machines</a></li>
+        <li><a href="{{ '/networking/' | relative_url }}">Networking</a></li>
+        <li><a href="{{ '/storage/' | relative_url }}">Storage</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Operating</h2>
+      <ul>
+        <li><a href="{{ '/high-availability/' | relative_url }}">High availability</a></li>
+        <li><a href="{{ '/updating/' | relative_url }}">Updating</a></li>
+        <li><a href="{{ '/monitoring/alerts/' | relative_url }}">Alerts</a></li>
+        <li><a href="{{ '/support/troubleshooting/' | relative_url }}">Troubleshooting</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Your account</h2>
+      <ul>
+        <li><a href="{{ site.product.portal }}">Customer portal</a></li>
+        <li><a href="{{ site.product.portal }}/#download">Download the installer</a></li>
+        <li><a href="{{ '/administration/licensing/' | relative_url }}">Licensing</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bar">
+    <p>{{ site.product.name }} · {{ site.product.vendor }} · Documentation</p>
+    <p>Licences are signed in the portal and verified on your appliance.</p>
+  </div>
+</footer>

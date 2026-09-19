@@ -1,0 +1,51 @@
+# ── Site ────────────────────────────────────────────────────────────────────
+title: VS-HCI Documentation
+tagline: Hyperconverged infrastructure, documented
+description: >-
+  Documentation for VS-HCI by Velarion Systems — installing the appliance,
+  running virtual machines, containers and Kubernetes, and operating the
+  fabrics, storage and control plane underneath them.
+
+# The public origin of the docs site.
+#
+#   Custom domain (docs.velarionsystems.com)  → url: "https://docs.velarionsystems.com", baseurl: ""
+#   Project page  (<user>.github.io/docs)     → url: "https://<user>.github.io",          baseurl: "/docs"
+#
+# Every link in the templates goes through `relative_url`, so switching between
+# the two is these two lines and nothing else.
+url: "https://docs.velarionsystems.com"
+baseurl: ""
+
+product:
+  name: VS-HCI
+  vendor: Velarion Systems
+  portal: "https://velarionsystems.com"
+
+# ── Build ───────────────────────────────────────────────────────────────────
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  toc_levels: 2..3
+  hard_wrap: false
+
+# Pretty URLs: /getting-started/requirements/ rather than …/requirements.html
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .claude
+
+# Every page under a section directory is a doc page unless it says otherwise.
+defaults:
+  - scope: { path: "" }
+    values:
+      layout: doc
+      status: draft

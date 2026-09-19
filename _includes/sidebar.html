@@ -1,0 +1,32 @@
+{%- comment -%}
+  Sidebar built from _data/nav.yml. `page.url` carries a trailing slash under
+  `permalink: pretty`, which is the shape the nav file stores, so the active
+  comparison is a plain string match.
+{%- endcomment -%}
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar__filter">
+    {% include icon.html name="search" %}
+    <input type="search" id="nav-filter" placeholder="Filter pages…" autocomplete="off" aria-label="Filter documentation pages">
+  </div>
+
+  <nav id="nav-tree" aria-label="Documentation">
+    {%- for group in site.data.nav -%}
+    <div class="sidebar__section" data-nav-section>
+      <p class="sidebar__heading">{% include icon.html name=group.icon %}{{ group.section }}</p>
+      <ul>
+        {%- for item in group.items -%}
+        {%- assign target = site.pages | where: "url", item.url | first -%}
+        <li data-nav-item>
+          <a class="side-item{% if page.url == item.url %} side-item--active{% endif %}{% if target.status == 'draft' %} side-item--draft{% endif %}"
+             href="{{ item.url | relative_url }}"
+             {% if page.url == item.url %}aria-current="page"{% endif %}
+             {% if target.status == 'draft' %}title="Still a stub"{% endif %}>{{ item.title }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endfor -%}
+    <p class="sidebar__empty" id="nav-empty" hidden>No page matches that.</p>
+  </nav>
+</aside>
+<div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
